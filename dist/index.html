@@ -7,6 +7,12 @@
     <meta name="description"
         content="United Pallets provides pallet manufacturing, recycling, supply chain support, and nationwide logistics programs across Peninsular Malaysia.">
     <link rel="icon" type="image/png" href="/assets/fav-Zp4JqGCc.png">
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""
+    >
     <style>
         body.is-loading {
             overflow: hidden;
@@ -74,10 +80,10 @@
         }
     </style>
     <title>United Pallets | Lifecycle Pallet Services</title>
-  <script type="module" crossorigin src="/assets/home-CGhxLS2F.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/site-Dz2mftme.js">
+  <script type="module" crossorigin src="/assets/home-CoVHaB0A.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/site-Dx7b7Yy8.js">
   <link rel="modulepreload" crossorigin href="/assets/siteContent-CmZOU2qp.js">
-  <link rel="stylesheet" crossorigin href="/assets/site-k5ioyfnm.css">
+  <link rel="stylesheet" crossorigin href="/assets/site-BIrh10iN.css">
 </head>
 
 <body data-page="home" class="is-loading">
@@ -238,75 +244,7 @@
                 </div>
                 <div class="network-map-card" data-reveal>
                     <div class="network-map">
-                        <svg class="network-svg" viewBox="0 0 520 520" role="img" aria-label="Peninsular Malaysia service footprint map">
-                            <defs>
-                                <linearGradient id="homePeninsulaFill" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stop-color="#355f97" stop-opacity="0.92" />
-                                    <stop offset="100%" stop-color="#1b3155" stop-opacity="0.98" />
-                                </linearGradient>
-                                <linearGradient id="homeCoastGlow" x1="0%" y1="0%" x2="0%" y2="100%">
-                                    <stop offset="0%" stop-color="#7bb0ea" stop-opacity="0.45" />
-                                    <stop offset="100%" stop-color="#f4a93d" stop-opacity="0.18" />
-                                </linearGradient>
-                            </defs>
-
-                            <path
-                                class="peninsula-outline"
-                                d="M246 42 L297 85 L293 135 L319 189 L311 250 L339 304 L329 370 L285 447 L246 420 L218 366 L206 286 L181 219 L192 133 L218 76 Z"
-                            />
-                            <path
-                                class="peninsula-highlight"
-                                d="M246 42 L297 85 L293 135 L319 189 L311 250 L339 304 L329 370 L285 447 L246 420 L218 366 L206 286 L181 219 L192 133 L218 76 Z"
-                            />
-
-                            <g class="network-hotspot" data-pin tabindex="0" role="button" aria-label="Penang location">
-                                <line x1="146" y1="133" x2="124" y2="133" class="network-line desktop-only" />
-                                <line x1="124" y1="133" x2="58" y2="126" class="network-line desktop-only" />
-                                <circle cx="146" cy="133" r="18" class="hotspot-ring" />
-                                <circle cx="146" cy="133" r="7" class="hotspot-core" />
-                                <g class="desktop-only">
-                                    <rect x="58" y="108" width="106" height="36" class="hotspot-label-box" rx="3" />
-                                    <circle cx="76" cy="126" r="6" class="hotspot-label-dot" />
-                                    <text x="92" y="131" class="hotspot-label-text">Penang</text>
-                                </g>
-                            </g>
-
-                            <g class="network-hotspot" data-pin tabindex="0" role="button" aria-label="Rawang location">
-                                <line x1="248" y1="228" x2="294" y2="228" class="network-line desktop-only" />
-                                <line x1="294" y1="228" x2="308" y2="226" class="network-line desktop-only" />
-                                <circle cx="248" cy="228" r="18" class="hotspot-ring" />
-                                <circle cx="248" cy="228" r="7" class="hotspot-core" />
-                                <g class="desktop-only">
-                                    <rect x="308" y="208" width="106" height="36" class="hotspot-label-box" rx="3" />
-                                    <circle cx="326" cy="226" r="6" class="hotspot-label-dot" />
-                                    <text x="342" y="231" class="hotspot-label-text">Rawang</text>
-                                </g>
-                            </g>
-
-                            <g class="network-hotspot" data-pin tabindex="0" role="button" aria-label="Nilai location">
-                                <line x1="258" y1="282" x2="304" y2="282" class="network-line desktop-only" />
-                                <line x1="304" y1="282" x2="320" y2="290" class="network-line desktop-only" />
-                                <circle cx="258" cy="282" r="18" class="hotspot-ring" />
-                                <circle cx="258" cy="282" r="7" class="hotspot-core" />
-                                <g class="desktop-only">
-                                    <rect x="320" y="272" width="106" height="36" class="hotspot-label-box" rx="3" />
-                                    <circle cx="338" cy="290" r="6" class="hotspot-label-dot" />
-                                    <text x="354" y="295" class="hotspot-label-text">Nilai</text>
-                                </g>
-                            </g>
-
-                            <g class="network-hotspot" data-pin tabindex="0" role="button" aria-label="Johor Bahru location">
-                                <line x1="302" y1="404" x2="336" y2="404" class="network-line desktop-only" />
-                                <line x1="336" y1="404" x2="344" y2="410" class="network-line desktop-only" />
-                                <circle cx="302" cy="404" r="18" class="hotspot-ring" />
-                                <circle cx="302" cy="404" r="7" class="hotspot-core" />
-                                <g class="desktop-only">
-                                    <rect x="344" y="392" width="126" height="36" class="hotspot-label-box" rx="3" />
-                                    <circle cx="362" cy="410" r="6" class="hotspot-label-dot" />
-                                    <text x="378" y="415" class="hotspot-label-text">Johor Bahru</text>
-                                </g>
-                            </g>
-                        </svg>
+                        <div class="network-live-map" data-network-map aria-label="Peninsular Malaysia service footprint map"></div>
                     </div>
                 </div>
             </div>
@@ -367,6 +305,11 @@
         <div id="shared-cta"></div>
     </main>
     <div id="site-footer"></div>
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""
+    ></script>
 </body>
 
 </html>

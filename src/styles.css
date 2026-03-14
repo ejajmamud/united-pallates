@@ -1424,6 +1424,9 @@
         }
 
         .scorecard-ring {
+            grid-column: 1;
+            grid-row: 1 / span 2;
+            align-self: center;
             width: 4.9rem;
             height: 4.9rem;
             margin: 0;
@@ -1447,15 +1450,22 @@
         }
 
         .scorecard-value {
+            grid-column: 2;
+            grid-row: 1;
             font-size: 1.95rem;
             align-self: end;
+            justify-self: start;
         }
 
         .scorecard-metric-label {
+            grid-column: 2;
+            grid-row: 2;
             margin: 0.2rem 0 0;
             max-width: none;
             font-size: 0.68rem;
             line-height: 1.35;
+            align-self: start;
+            justify-self: start;
         }
     }
 
@@ -1584,6 +1594,9 @@
         font-weight: 500;
         line-height: 1.7;
         color: inherit;
+        min-width: 0;
+        overflow-wrap: anywhere;
+        word-break: break-word;
     }
 
     .footer-bottom {
@@ -1618,7 +1631,7 @@
         }
 
         .footer-grid {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-columns: minmax(0, 0.4fr) minmax(0, 0.6fr);
             gap: 1.8rem 1.25rem;
         }
 
@@ -1630,6 +1643,10 @@
             margin-top: 1rem;
             font-size: 0.98rem;
             line-height: 1.9;
+        }
+
+        .footer-contact-column .footer-title {
+            text-align: center;
         }
 
         .footer-links a {
@@ -2320,11 +2337,121 @@
     }
 
     .network-map {
-        @apply overflow-hidden border border-white/10 bg-[radial-gradient(circle_at_top,rgba(244,169,61,0.10),transparent_24%),linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.01))];
+        @apply relative overflow-hidden border border-white/10 bg-[radial-gradient(circle_at_top,rgba(244,169,61,0.10),transparent_24%),linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.01))];
+        aspect-ratio: 1 / 1;
     }
 
-    .network-svg {
-        @apply block h-auto w-full;
+    .network-live-map {
+        width: 100%;
+        height: 100%;
+        min-height: 32rem;
+    }
+
+    .network-live-map .leaflet-pane,
+    .network-live-map .leaflet-control-container,
+    .network-live-map .leaflet-top,
+    .network-live-map .leaflet-bottom {
+        z-index: 1;
+    }
+
+    .network-live-map .leaflet-container {
+        width: 100%;
+        height: 100%;
+        background: #162238;
+        font: inherit;
+    }
+
+    .network-live-map .leaflet-control-attribution {
+        display: none;
+    }
+
+    .network-live-map .leaflet-tile-pane {
+        filter: saturate(0.88) hue-rotate(-8deg) brightness(0.86) contrast(1.04);
+    }
+
+    .network-map-marker {
+        background: transparent;
+        border: 0;
+    }
+
+    .network-map-marker > div,
+    .network-map-marker {
+        overflow: visible !important;
+    }
+
+    .network-map-dot {
+        position: absolute;
+        top: 50%;
+        left: 0.75rem;
+        width: 0.95rem;
+        height: 0.95rem;
+        border-radius: 999px;
+        background: #f4a93d;
+        box-shadow:
+            0 0 0 6px rgba(244, 169, 61, 0.14),
+            0 0 0 1px rgba(255, 224, 169, 0.6);
+        transform: translate(-50%, -50%);
+    }
+
+    .network-map-chip {
+        position: absolute;
+        top: 50%;
+        left: 2rem;
+        display: inline-flex;
+        align-items: center;
+        min-height: 2.35rem;
+        padding: 0.5rem 0.9rem;
+        border: 1px solid rgba(244, 169, 61, 0.32);
+        border-radius: 0.35rem;
+        background: rgba(16, 24, 28, 0.9);
+        font-size: 0.95rem;
+        font-weight: 600;
+        line-height: 1;
+        white-space: nowrap;
+        color: #ffffff;
+        box-shadow: 0 16px 28px -20px rgba(0, 0, 0, 0.7);
+        transform: translateY(-50%);
+    }
+
+    .network-map-chip-dot {
+        width: 0.7rem;
+        height: 0.7rem;
+        margin-right: 0.65rem;
+        border-radius: 999px;
+        background: #f4a93d;
+    }
+
+    .network-map-marker--west .network-map-chip {
+        left: auto;
+        right: 2rem;
+    }
+
+    .network-map-marker--west .network-map-dot {
+        left: auto;
+        right: 0.75rem;
+    }
+
+    .network-map-marker--west .network-map-dot {
+        transform: translate(50%, -50%);
+    }
+
+    .network-map-marker--west::before,
+    .network-map-marker::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 1.25rem;
+        height: 1px;
+        background: rgba(244, 169, 61, 0.65);
+        transform: translateY(-50%);
+    }
+
+    .network-map-marker::before {
+        left: 0.75rem;
+    }
+
+    .network-map-marker--west::before {
+        right: 0.75rem;
     }
 
     .network-legend {
@@ -2572,6 +2699,34 @@
     }
 
     @media (max-width: 767px) {
+        .network-map-card {
+            padding: 1rem;
+        }
+
+        .network-live-map {
+            min-height: 20rem;
+        }
+
+        .network-map-chip {
+            min-height: 1.95rem;
+            padding: 0.4rem 0.65rem;
+            font-size: 0.76rem;
+        }
+
+        .network-map-chip-dot {
+            width: 0.55rem;
+            height: 0.55rem;
+            margin-right: 0.45rem;
+        }
+
+        .network-map-dot {
+            width: 0.78rem;
+            height: 0.78rem;
+            box-shadow:
+                0 0 0 4px rgba(244, 169, 61, 0.14),
+                0 0 0 1px rgba(255, 224, 169, 0.56);
+        }
+
         .home-faq-intro-card,
         .home-faq-panel {
             border-radius: 24px;

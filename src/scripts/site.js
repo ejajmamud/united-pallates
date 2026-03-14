@@ -42,6 +42,7 @@ export function bootSite(activeNav) {
     initReveals();
     initCounters();
     initHeroSwiper();
+    initNetworkMaps();
     dismissPreloader();
 }
 
@@ -158,6 +159,62 @@ function initCounters() {
                     }
                 });
             }
+        });
+    });
+}
+
+function initNetworkMaps() {
+    const mapNodes = document.querySelectorAll("[data-network-map]");
+    if (!mapNodes.length) return;
+    const L = window.L;
+    if (!L) return;
+
+    const locations = [
+        { name: "Penang", coords: [5.4164, 100.3327] },
+        { name: "Rawang", coords: [3.3211, 101.4879] },
+        { name: "Nilai", coords: [2.8033, 101.7972] },
+        { name: "Johor Bahru", coords: [1.4927, 103.7414] }
+    ];
+
+    mapNodes.forEach((node) => {
+        if (node.dataset.mapReady === "true") return;
+        node.dataset.mapReady = "true";
+
+        const map = L.map(node, {
+            zoomControl: false,
+            attributionControl: false,
+            dragging: true,
+            scrollWheelZoom: false,
+            doubleClickZoom: false,
+            boxZoom: false,
+            keyboard: false,
+            tap: false
+        });
+
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            maxZoom: 18
+        }).addTo(map);
+
+        map.setView([3.82, 101.92], 7);
+
+        const iconHtml = `
+            <span class="network-map-dot"></span>
+            <span class="network-map-chip">
+                <span class="network-map-chip-dot"></span>
+                <span class="network-map-chip-text"></span>
+            </span>
+        `;
+
+        locations.forEach((location) => {
+            const marker = L.marker(location.coords, {
+                icon: L.divIcon({
+                    className: `network-map-marker${location.name === "Penang" ? " network-map-marker--west" : ""}`,
+                    html: iconHtml.replace('<span class="network-map-chip-text"></span>', `<span class="network-map-chip-text">${location.name}</span>`),
+                    iconSize: [140, 34],
+                    iconAnchor: location.name === "Penang" ? [128, 17] : [12, 17]
+                })
+            });
+            marker.addTo(map);
         });
     });
 }

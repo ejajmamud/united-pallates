@@ -387,9 +387,7 @@
         position: absolute;
         inset: 0;
         z-index: 0;
-        background:
-            linear-gradient(180deg, rgba(7, 17, 31, 0.2), rgba(7, 17, 31, 0.2)),
-            url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80") center / cover no-repeat;
+        background: url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80") center / cover no-repeat;
     }
 
     body[data-page="home"] .hero-shell {
@@ -413,6 +411,7 @@
         @apply absolute inset-0 h-full w-full;
         z-index: 1;
         background: transparent;
+        opacity: 1;
     }
 
     .hero-media {
@@ -423,8 +422,8 @@
         @apply absolute inset-0;
         z-index: 2;
         background:
-            linear-gradient(90deg, rgba(7, 17, 31, 0.92) 0%, rgba(7, 17, 31, 0.74) 42%, rgba(7, 17, 31, 0.84) 100%),
-            linear-gradient(180deg, rgba(8, 24, 47, 0.24) 0%, rgba(8, 24, 47, 0.08) 100%);
+            linear-gradient(90deg, rgba(7, 17, 31, 0.6) 0%, rgba(7, 17, 31, 0.32) 42%, rgba(7, 17, 31, 0.46) 100%),
+            linear-gradient(180deg, rgba(8, 24, 47, 0.08) 0%, rgba(8, 24, 47, 0.02) 100%);
     }
 
     .hero-content {

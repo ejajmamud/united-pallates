@@ -1,3 +1,8 @@
+import standardPalletImage from "../assets/pallets/standard.webp";
+import customPalletImage from "../assets/pallets/custom-pallet.webp";
+import reconditionedPalletImage from "../assets/pallets/Reconditioned-Pallets.png";
+import heatTreatedPalletImage from "../assets/pallets/heat-treatment-palletr.webp";
+
 export const serviceCards = [
     {
         title: "Buy Pallets",
@@ -82,7 +87,7 @@ export const productCards = [
             { label: "Build", value: "Hardwood / mixed timber" },
             { label: "Availability", value: "Ongoing volume supply" }
         ],
-        image: "./assets/pallets/standard.webp",
+        image: standardPalletImage,
         type: "standard",
         accent: "blue"
     },
@@ -96,7 +101,7 @@ export const productCards = [
             { label: "Support", value: "Specification review" },
             { label: "Lead Time", value: "Scheduled production runs" }
         ],
-        image: "./assets/pallets/custom-pallet.webp",
+        image: customPalletImage,
         type: "custom",
         accent: "gold"
     },
@@ -110,7 +115,7 @@ export const productCards = [
             { label: "Benefit", value: "Lower replacement cost" },
             { label: "Supply", value: "Subject to recovery volume" }
         ],
-        image: "./assets/pallets/Reconditioned-Pallets.png",
+        image: reconditionedPalletImage,
         type: "reconditioned",
         accent: "slate"
     },
@@ -124,7 +129,7 @@ export const productCards = [
             { label: "Documents", value: "Marking support" },
             { label: "Format", value: "Standard or custom base" }
         ],
-        image: "./assets/pallets/heat-treatment-palletr.webp",
+        image: heatTreatedPalletImage,
         type: "heat-treated",
         accent: "blue-soft"
     }

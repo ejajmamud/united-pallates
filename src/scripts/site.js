@@ -37,6 +37,7 @@ export function bootSite(activeNav) {
     }
     requestAnimationFrame(raf);
     lenis.on("scroll", ScrollTrigger.update);
+    initHeaderScrollState(lenis);
 
     initReveals();
     initCounters();
@@ -68,6 +69,37 @@ function dismissPreloader() {
                 preloader.remove();
             }, 500);
         });
+    });
+}
+
+function initHeaderScrollState(lenis) {
+    const header = document.querySelector(".site-header");
+    if (!header) return;
+
+    let lastY = 0;
+    let ticking = false;
+    const downThreshold = 10;
+    const upThreshold = 6;
+
+    const applyState = (currentY) => {
+        const delta = currentY - lastY;
+        const nearTop = currentY <= 16;
+
+        if (nearTop || delta <= -upThreshold) {
+            header.classList.remove("is-hidden");
+        } else if (delta >= downThreshold) {
+            header.classList.add("is-hidden");
+        }
+
+        lastY = currentY;
+        ticking = false;
+    };
+
+    lenis.on("scroll", ({ animatedScroll }) => {
+        const currentY = Math.max(animatedScroll, 0);
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => applyState(currentY));
     });
 }
 

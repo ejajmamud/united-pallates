@@ -15,8 +15,8 @@ export default {
                 }
             },
             fontFamily: {
-                sans: ["Inter", "sans-serif"],
-                body: ["Inter", "sans-serif"]
+                sans: ["WF Visual Sans Variable", "Arial", "sans-serif"],
+                body: ["WF Visual Sans Variable", "Arial", "sans-serif"]
             },
             boxShadow: {
                 panel: "0 16px 40px rgba(16, 24, 28, 0.08)"

@@ -1,4 +1,4 @@
-import{i as s,c as n}from"./site-DDmNp2k0.js";import{l as i,f as o}from"./siteContent-DK6WsTMm.js";function c(a){return a.map((e,t)=>`
+import{i as s,c as n}from"./site-CYOsQwy-.js";import{l as i,f as o}from"./siteContent-DgvNvxFr.js";function c(a){return a.map((e,t)=>`
             <article class="faq-item">
                 <h3>
                     <button type="button" class="faq-trigger" @click="active = active === ${t} ? null : ${t}" :aria-expanded="(active === ${t}).toString()">

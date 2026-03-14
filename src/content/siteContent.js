@@ -74,37 +74,57 @@ export const resources = [
 export const productCards = [
     {
         title: "Standard Pallets",
-        description: "Reliable formats for regular throughput, repeatable loads, and consistent warehouse handling.",
+        description: "Reliable warehouse-ready pallets for repeat loads, stable handling, and day-to-day industrial movement.",
         specs: ["General industrial use", "Consistent dimensions", "Bulk supply ready"],
-        image:
-            "https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?auto=format&fit=crop&w=900&q=80",
+        details: [
+            { label: "Entry", value: "2-way / 4-way options" },
+            { label: "Use Case", value: "Storage and distribution" },
+            { label: "Build", value: "Hardwood / mixed timber" },
+            { label: "Availability", value: "Ongoing volume supply" }
+        ],
+        image: "./assets/pallets/standard.webp",
         type: "standard",
         accent: "blue"
     },
     {
         title: "Custom Pallets",
-        description: "Built to match unique product footprints, loading conditions, and transport requirements.",
+        description: "Built around product footprint, stacking logic, export method, and handling equipment requirements.",
         specs: ["Custom sizing", "Design support", "Built to order"],
-        image:
-            "https://images.unsplash.com/photo-1586528116493-32d4ca9d108f?auto=format&fit=crop&w=900&q=80",
+        details: [
+            { label: "Design", value: "Made to drawing or sample" },
+            { label: "Use Case", value: "Special loads and export" },
+            { label: "Support", value: "Specification review" },
+            { label: "Lead Time", value: "Scheduled production runs" }
+        ],
+        image: "./assets/pallets/custom-pallet.webp",
         type: "custom",
         accent: "gold"
     },
     {
         title: "Reconditioned Pallets",
-        description: "Recovered pallets restored for continued use where performance and cost efficiency need to balance.",
+        description: "Recovered pallets restored for continued circulation where cost efficiency and usable strength need to balance.",
         specs: ["Recovered stock", "Inspected and repaired", "Budget conscious"],
-        image:
-            "https://images.unsplash.com/photo-1586880244543-0528a802be97?auto=format&fit=crop&w=900&q=80",
+        details: [
+            { label: "Condition", value: "Graded and repaired" },
+            { label: "Use Case", value: "Closed-loop operations" },
+            { label: "Benefit", value: "Lower replacement cost" },
+            { label: "Supply", value: "Subject to recovery volume" }
+        ],
+        image: "./assets/pallets/Reconditioned-Pallets.png",
         type: "reconditioned",
         accent: "slate"
     },
     {
         title: "Heat Treated Pallets",
-        description: "Prepared for export-related handling requirements where treatment standards must be met.",
+        description: "Prepared for export programs where treatment compliance, documentation, and inspection readiness matter.",
         specs: ["Export oriented", "Treatment ready", "Documentation support"],
-        image:
-            "https://images.unsplash.com/photo-1565891741441-64926e441838?auto=format&fit=crop&w=900&q=80",
+        details: [
+            { label: "Treatment", value: "ISPM 15 heat treated" },
+            { label: "Use Case", value: "Export shipments" },
+            { label: "Documents", value: "Marking support" },
+            { label: "Format", value: "Standard or custom base" }
+        ],
+        image: "./assets/pallets/heat-treatment-palletr.webp",
         type: "heat-treated",
         accent: "blue-soft"
     }

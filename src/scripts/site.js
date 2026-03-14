@@ -195,10 +195,20 @@ function initNetworkMaps() {
             maxZoom: 18
         }).addTo(map);
 
-        map.setView([3.82, 101.92], 7);
+        const bounds = L.latLngBounds(locations.map((location) => location.coords));
+        const isMobile = window.matchMedia("(max-width: 767px)").matches;
+        map.fitBounds(bounds, {
+            paddingTopLeft: isMobile ? [26, 26] : [34, 34],
+            paddingBottomRight: isMobile ? [26, 26] : [34, 34]
+        });
 
         const iconHtml = `
-            <span class="network-map-dot"></span>
+            <span class="network-map-pin-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                    <path d="M12 21s-6-5.33-6-11a6 6 0 1 1 12 0c0 5.67-6 11-6 11Z"></path>
+                    <circle cx="12" cy="10" r="2.5"></circle>
+                </svg>
+            </span>
             <span class="network-map-chip">
                 <span class="network-map-chip-dot"></span>
                 <span class="network-map-chip-text"></span>
@@ -206,9 +216,10 @@ function initNetworkMaps() {
         `;
 
         locations.forEach((location) => {
+            const slug = location.name.toLowerCase().replace(/\s+/g, "-");
             const marker = L.marker(location.coords, {
                 icon: L.divIcon({
-                    className: `network-map-marker${location.name === "Penang" ? " network-map-marker--west" : ""}`,
+                    className: `network-map-marker network-map-marker--${slug}${location.name === "Penang" ? " network-map-marker--west" : ""}`,
                     html: iconHtml.replace('<span class="network-map-chip-text"></span>', `<span class="network-map-chip-text">${location.name}</span>`),
                     iconSize: [140, 34],
                     iconAnchor: location.name === "Penang" ? [128, 17] : [12, 17]

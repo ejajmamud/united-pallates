@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about United Pallets, our operations scale, sustainability commitment, and national service footprint.">
+    <link rel="icon" type="image/png" href="./assets/icons/fav.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body.is-loading { overflow: hidden; background: #07111f; }
+        body.is-loading #site-header, body.is-loading main, body.is-loading #site-footer { opacity: 0; }
+        .site-preloader { position: fixed; inset: 0; z-index: 9999; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at top, rgba(244, 169, 61, 0.16), transparent 30%), linear-gradient(135deg, #07111f 0%, #102448 58%, #18365f 100%); transition: opacity 0.45s ease, visibility 0.45s ease; }
+        .site-preloader__mark { display: grid; gap: 16px; justify-items: center; }
+        .site-preloader__ring { width: 64px; height: 64px; border: 3px solid rgba(255, 255, 255, 0.12); border-top-color: #f4a93d; border-right-color: rgba(123, 176, 234, 0.95); border-radius: 999px; animation: up-spin 0.9s linear infinite; }
+        .site-preloader__text { color: rgba(255, 255, 255, 0.92); font: 600 12px/1 Inter, sans-serif; letter-spacing: 0.22em; text-transform: uppercase; }
+        body.is-loaded .site-preloader { opacity: 0; visibility: hidden; pointer-events: none; }
+        body.is-loaded #site-header, body.is-loaded main, body.is-loaded #site-footer { opacity: 1; }
+        @keyframes up-spin { to { transform: rotate(360deg); } }
+    </style>
+    <title>About Us | United Pallets</title>
+</head>
+<body data-page="about" class="is-loading">
+    <div class="site-preloader" aria-hidden="true">
+        <div class="site-preloader__mark">
+            <div class="site-preloader__ring"></div>
+            <p class="site-preloader__text">United Pallets</p>
+        </div>
+    </div>
+    <div id="site-header"></div>
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <p class="eyebrow text-brand-gold">About Us</p>
+                <h1 class="display-lg">A pallet partner built around <span class="heading-accent">continuity of supply</span> and practical execution.</h1>
+                <p>Established in 2019 and operating from Rawang, United Pallets combines manufacturing, recovery, delivery, and program support under one operating model.</p>
+            </div>
+        </section>
+        <section class="section-block bg-white">
+            <div class="container split-section">
+                <div data-reveal>
+                    <p class="eyebrow">Company Overview</p>
+                    <h2 class="display-md">Designed to support <span class="heading-accent-soft">pallet-intensive operations</span> with fewer handoffs.</h2>
+                    <p class="body-lg">United Pallets works with businesses that depend on pallet consistency, fast response, and practical cost control. By keeping design, manufacturing, recovery, and delivery closely aligned, the company is able to support customers with better continuity and clearer accountability.</p>
+                </div>
+                <div class="image-block" data-reveal><img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1400&q=80" alt="United Pallets operations overview" loading="lazy"></div>
+            </div>
+        </section>
+        <section class="section-block bg-brand-mist">
+            <div class="container split-section">
+                <div class="image-block" data-reveal><img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1400&q=80" alt="Operations scale and logistics fleet" loading="lazy"></div>
+                <div data-reveal>
+                    <p class="eyebrow">Operations Scale</p>
+                    <h2 class="display-md">Daily service built on <span class="heading-accent">regional manufacturing</span> and recovery capability.</h2>
+                    <ul class="program-list">
+                        <li>Manufacturing and pallet distribution support for regular industrial demand.</li>
+                        <li>Recovery routing and repair operations that extend pallet life and reduce waste.</li>
+                        <li>Regional service points that support customers across Peninsular Malaysia.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="section-block theme-deep network-section">
+            <div class="container network-shell">
+                <div data-reveal>
+                    <p class="eyebrow text-brand-gold">Malaysia Network</p>
+                    <h2 class="display-md text-white">Local service on a national scale.</h2>
+                    <p class="body-lg text-slate-300">With a broad operating footprint and multiple service points, United Pallets supports customers across Peninsular Malaysia while maintaining the responsiveness expected from a local partner.</p>
+                    <div class="network-legend" id="location-list"></div>
+                </div>
+                <div class="network-map-card" data-reveal>
+                    <div class="network-map">
+                        <svg class="network-svg" viewBox="0 0 520 520" role="img" aria-label="Peninsular Malaysia service map">
+                            <path class="peninsula-outline" d="M246 42 L297 85 L293 135 L319 189 L311 250 L339 304 L329 370 L285 447 L246 420 L218 366 L206 286 L181 219 L192 133 L218 76 Z"></path>
+                            <path class="peninsula-highlight" d="M246 42 L297 85 L293 135 L319 189 L311 250 L339 304 L329 370 L285 447 L246 420 L218 366 L206 286 L181 219 L192 133 L218 76 Z"></path>
+                            <g><line x1="146" y1="133" x2="124" y2="133" class="network-line"></line><line x1="124" y1="133" x2="58" y2="126" class="network-line"></line><circle cx="146" cy="133" r="18" class="hotspot-ring"></circle><circle cx="146" cy="133" r="7" class="hotspot-core"></circle><rect x="58" y="108" width="106" height="36" class="hotspot-label-box" rx="3"></rect><circle cx="76" cy="126" r="6" class="hotspot-label-dot"></circle><text x="92" y="131" class="hotspot-label-text">Penang</text></g>
+                            <g><line x1="248" y1="228" x2="294" y2="228" class="network-line"></line><line x1="294" y1="228" x2="308" y2="226" class="network-line"></line><circle cx="248" cy="228" r="18" class="hotspot-ring"></circle><circle cx="248" cy="228" r="7" class="hotspot-core"></circle><rect x="308" y="208" width="106" height="36" class="hotspot-label-box" rx="3"></rect><circle cx="326" cy="226" r="6" class="hotspot-label-dot"></circle><text x="342" y="231" class="hotspot-label-text">Rawang</text></g>
+                            <g><line x1="258" y1="282" x2="304" y2="282" class="network-line"></line><line x1="304" y1="282" x2="320" y2="290" class="network-line"></line><circle cx="258" cy="282" r="18" class="hotspot-ring"></circle><circle cx="258" cy="282" r="7" class="hotspot-core"></circle><rect x="320" y="272" width="106" height="36" class="hotspot-label-box" rx="3"></rect><circle cx="338" cy="290" r="6" class="hotspot-label-dot"></circle><text x="354" y="295" class="hotspot-label-text">Nilai</text></g>
+                            <g><line x1="302" y1="404" x2="336" y2="404" class="network-line"></line><line x1="336" y1="404" x2="344" y2="410" class="network-line"></line><circle cx="302" cy="404" r="18" class="hotspot-ring"></circle><circle cx="302" cy="404" r="7" class="hotspot-core"></circle><rect x="344" y="392" width="126" height="36" class="hotspot-label-box" rx="3"></rect><circle cx="362" cy="410" r="6" class="hotspot-label-dot"></circle><text x="378" y="415" class="hotspot-label-text">Johor Bahru</text></g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-block bg-white">
+            <div class="container" x-data="{ active: 0 }">
+                <p class="eyebrow" data-reveal>Sustainability Commitment</p>
+                <h2 class="display-md" data-reveal>Lifecycle thinking backed by <span class="heading-accent-soft">operational discipline</span>.</h2>
+                <div class="faq-list" id="about-faq"></div>
+            </div>
+        </section>
+        <div id="shared-cta"></div>
+    </main>
+    <div id="site-footer"></div>
+    <script type="module" src="./scripts/about.js"></script>
+</body>
+</html>

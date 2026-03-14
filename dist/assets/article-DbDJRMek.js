@@ -1,0 +1,1 @@
+import{c as r}from"./site-DDmNp2k0.js";import{r as t}from"./siteContent-DK6WsTMm.js";document.querySelector("#related-articles").innerHTML=t.slice(0,3).map(e=>`<a href="./article.html">${e.title}</a>`).join("");r("resources");

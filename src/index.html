@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="United Pallets provides pallet manufacturing, recycling, supply chain support, and nationwide logistics programs across Peninsular Malaysia.">
+    <link rel="icon" type="image/png" href="./assets/icons/fav.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body.is-loading {
+            overflow: hidden;
+            background: #07111f;
+        }
+
+        body.is-loading #site-header,
+        body.is-loading main,
+        body.is-loading #site-footer {
+            opacity: 0;
+        }
+
+        .site-preloader {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:
+                radial-gradient(circle at top, rgba(244, 169, 61, 0.16), transparent 30%),
+                linear-gradient(135deg, #07111f 0%, #102448 58%, #18365f 100%);
+            transition: opacity 0.45s ease, visibility 0.45s ease;
+        }
+
+        .site-preloader__mark {
+            display: grid;
+            gap: 16px;
+            justify-items: center;
+        }
+
+        .site-preloader__ring {
+            width: 64px;
+            height: 64px;
+            border: 3px solid rgba(255, 255, 255, 0.12);
+            border-top-color: #f4a93d;
+            border-right-color: rgba(123, 176, 234, 0.95);
+            border-radius: 999px;
+            animation: up-spin 0.9s linear infinite;
+        }
+
+        .site-preloader__text {
+            color: rgba(255, 255, 255, 0.92);
+            font: 600 12px/1 Inter, sans-serif;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+
+        body.is-loaded .site-preloader {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        body.is-loaded #site-header,
+        body.is-loaded main,
+        body.is-loaded #site-footer {
+            opacity: 1;
+        }
+
+        @keyframes up-spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <title>United Pallets | Lifecycle Pallet Services</title>
+</head>
+
+<body data-page="home" class="is-loading">
+    <div class="site-preloader" aria-hidden="true">
+        <div class="site-preloader__mark">
+            <div class="site-preloader__ring"></div>
+            <p class="site-preloader__text">United Pallets</p>
+        </div>
+    </div>
+    <div id="site-header"></div>
+    <main>
+        <section class="hero-shell">
+            <div class="swiper hero-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <video class="hero-media" autoplay muted loop playsinline preload="auto">
+                            <source src="./assets/hero1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="swiper-slide">
+                        <video class="hero-media" autoplay muted loop playsinline preload="metadata">
+                            <source src="./assets/hero2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="hero-grid">
+                    <div class="hero-copy">
+                        <p class="eyebrow text-brand-gold">Integrated Pallet Lifecycle Services</p>
+                        <h1 class="display-xl">From Used to <span class="heading-accent-soft">Renewed</span> &mdash; One Pallet at a Time</h1>
+                        <p class="lead text-slate-200">
+                            United Pallets supports the full pallet lifecycle with supply, recovery, repair,
+                            remanufacturing, and logistics programs built for serious industrial operations.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="./contact.html" class="btn-primary">Get a Quote Now</a>
+                            <a href="./services.html" class="btn-secondary">Explore Services</a>
+                        </div>
+                    </div>
+                    <div class="hero-panel glass-card">
+                        <p class="eyebrow text-brand-gold">Operational Scope</p>
+                        <div class="hero-panel-list">
+                            <div>
+                                <h2>Manufacturing and Supply</h2>
+                                <p>New, recycled, and remanufactured pallet availability shaped around throughput and handling requirements.</p>
+                            </div>
+                            <div>
+                                <h2>Recovery and Recycling</h2>
+                                <p>Collection and grading programs that help businesses recover value and reduce wood waste.</p>
+                            </div>
+                            <div>
+                                <h2>National Support</h2>
+                                <p>Regional service coverage across Peninsular Malaysia with local responsiveness and dependable execution.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-block bg-white">
+            <div class="container section-intro" data-reveal>
+                <div>
+                    <p class="eyebrow">Innovative Pallet Services</p>
+                    <h2 class="display-md">Built for the demands of <span class="heading-accent">daily pallet movement</span>.</h2>
+                </div>
+                <p class="body-lg">
+                    United Pallets combines pallet supply, recycling, repair, and reporting into programs that reduce
+                    disruption and improve continuity across supply chains.
+                </p>
+            </div>
+            <div class="container grid-cards grid-cards-3" id="home-services"></div>
+        </section>
+
+        <section class="section-block bg-brand-mist">
+            <div class="container split-section">
+                <div class="media-stack" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=900&q=80"
+                        alt="Truck fleet and pallet logistics" class="tile-img tile-img-lg" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=900&q=80"
+                        alt="Warehouse storage lanes" class="tile-img" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1586880244406-556ebe35f282?auto=format&fit=crop&w=900&q=80"
+                        alt="Pallet movement and handling" class="tile-img" loading="lazy">
+                </div>
+                <div data-reveal>
+                    <p class="eyebrow">Nationwide Coverage</p>
+                    <h2 class="display-md">Capacity backed by <span class="heading-accent">operating discipline</span>.</h2>
+                    <p class="body-lg">
+                        United Pallets manages new and recycled pallet flow nationwide through manufacturing support,
+                        service locations, recovery operations, and dependable routing across Peninsular Malaysia.
+                    </p>
+                    <div class="stats-grid" id="home-stats"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-block bg-white">
+            <div class="scorecard-band" data-reveal>
+                <div class="container">
+                    <div class="scorecard-shell">
+                    <div class="scorecard-rank" data-reveal>
+                        <span class="scorecard-year-top">20</span>
+                        <span class="scorecard-year-bottom">25</span>
+                        <p class="scorecard-label">Green Score Card</p>
+                    </div>
+                    <div class="scorecard-content">
+                        <div class="scorecard-copy" data-reveal>
+                            <p class="scorecard-kicker">Sustainability Impact</p>
+                            <h2 class="scorecard-title">From used timber to <span>renewed operational value</span>.</h2>
+                        </div>
+                        <div class="scorecard-metrics">
+                            <article class="scorecard-metric scorecard-metric--emerald" data-reveal>
+                                <div class="scorecard-ring">
+                                    <div class="scorecard-ring-core" aria-hidden="true">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="icon-stroke"><path d="M7 20h10"></path><path d="M10 20c5.5-2.5.8-6.4 3-10"></path><path d="M9.5 9.4C5.7 10.8 6 15 2 17c5 1 4.7-5 8-6"></path><path d="M14 4c0 4.5 2.7 5.5 5 9 1.3 1.9.3 5-3 5"></path></svg>
+                                    </div>
+                                </div>
+                                <p class="scorecard-value">18,947</p>
+                                <p class="scorecard-metric-label">Trees Preserved</p>
+                            </article>
+                            <article class="scorecard-metric scorecard-metric--gold" data-reveal>
+                                <div class="scorecard-ring">
+                                    <div class="scorecard-ring-core" aria-hidden="true">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="icon-stroke"><path d="M21 8a2 2 0 0 0-2-2h-3.2a2 2 0 0 1-1.4-.6l-.8-.8A2 2 0 0 0 12.2 4H8a2 2 0 0 0-2 2v2"></path><path d="M3 10h18"></path><path d="M19 10v8a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-8"></path><path d="M10 14v4"></path><path d="M14 14v4"></path></svg>
+                                    </div>
+                                </div>
+                                <p class="scorecard-value">7,200</p>
+                                <p class="scorecard-metric-label">Tons of Landfill Waste Avoided</p>
+                            </article>
+                            <article class="scorecard-metric scorecard-metric--blue" data-reveal>
+                                <div class="scorecard-ring">
+                                    <div class="scorecard-ring-core" aria-hidden="true">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="icon-stroke"><path d="M17.5 19H9a7 7 0 1 1 6.71-9.01A4.5 4.5 0 1 1 17.5 19Z"></path></svg>
+                                    </div>
+                                </div>
+                                <p class="scorecard-value">9,720</p>
+                                <p class="scorecard-metric-label">Tons of CO2 Emissions Reduced</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-block network-section">
+            <div class="container network-shell">
+                <div data-reveal>
+                    <p class="eyebrow text-brand-gold">Malaysia Network</p>
+                    <h2 class="display-md text-white">Local service on a <span class="heading-accent-soft">national scale</span>.</h2>
+                    <p class="body-lg text-slate-300">
+                        With a broad operating footprint and multiple service points, United Pallets supports
+                        customers across Peninsular Malaysia while maintaining the responsiveness expected from a local partner.
+                    </p>
+                    <div class="network-legend" id="home-network-list"></div>
+                </div>
+                <div class="network-map-card" data-reveal>
+                    <div class="network-map">
+                        <svg class="network-svg" viewBox="0 0 520 520" role="img" aria-label="Peninsular Malaysia service footprint map">
+                            <defs>
+                                <linearGradient id="homePeninsulaFill" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#355f97" stop-opacity="0.92" />
+                                    <stop offset="100%" stop-color="#1b3155" stop-opacity="0.98" />
+                                </linearGradient>
+                                <linearGradient id="homeCoastGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#7bb0ea" stop-opacity="0.45" />
+                                    <stop offset="100%" stop-color="#f4a93d" stop-opacity="0.18" />
+                                </linearGradient>
+                            </defs>
+
+                            <path
+                                class="peninsula-outline"
+                                d="M246 42 L297 85 L293 135 L319 189 L311 250 L339 304 L329 370 L285 447 L246 420 L218 366 L206 286 L181 219 L192 133 L218 76 Z"
+                            />
+                            <path
+                                class="peninsula-highlight"
+                                d="M246 42 L297 85 L293 135 L319 189 L311 250 L339 304 L329 370 L285 447 L246 420 L218 366 L206 286 L181 219 L192 133 L218 76 Z"
+                            />
+
+                            <g class="network-hotspot" data-pin tabindex="0" role="button" aria-label="Penang location">
+                                <line x1="146" y1="133" x2="124" y2="133" class="network-line desktop-only" />
+                                <line x1="124" y1="133" x2="58" y2="126" class="network-line desktop-only" />
+                                <circle cx="146" cy="133" r="18" class="hotspot-ring" />
+                                <circle cx="146" cy="133" r="7" class="hotspot-core" />
+                                <g class="desktop-only">
+                                    <rect x="58" y="108" width="106" height="36" class="hotspot-label-box" rx="3" />
+                                    <circle cx="76" cy="126" r="6" class="hotspot-label-dot" />
+                                    <text x="92" y="131" class="hotspot-label-text">Penang</text>
+                                </g>
+                            </g>
+
+                            <g class="network-hotspot" data-pin tabindex="0" role="button" aria-label="Rawang location">
+                                <line x1="248" y1="228" x2="294" y2="228" class="network-line desktop-only" />
+                                <line x1="294" y1="228" x2="308" y2="226" class="network-line desktop-only" />
+                                <circle cx="248" cy="228" r="18" class="hotspot-ring" />
+                                <circle cx="248" cy="228" r="7" class="hotspot-core" />
+                                <g class="desktop-only">
+                                    <rect x="308" y="208" width="106" height="36" class="hotspot-label-box" rx="3" />
+                                    <circle cx="326" cy="226" r="6" class="hotspot-label-dot" />
+                                    <text x="342" y="231" class="hotspot-label-text">Rawang</text>
+                                </g>
+                            </g>
+
+                            <g class="network-hotspot" data-pin tabindex="0" role="button" aria-label="Nilai location">
+                                <line x1="258" y1="282" x2="304" y2="282" class="network-line desktop-only" />
+                                <line x1="304" y1="282" x2="320" y2="290" class="network-line desktop-only" />
+                                <circle cx="258" cy="282" r="18" class="hotspot-ring" />
+                                <circle cx="258" cy="282" r="7" class="hotspot-core" />
+                                <g class="desktop-only">
+                                    <rect x="320" y="272" width="106" height="36" class="hotspot-label-box" rx="3" />
+                                    <circle cx="338" cy="290" r="6" class="hotspot-label-dot" />
+                                    <text x="354" y="295" class="hotspot-label-text">Nilai</text>
+                                </g>
+                            </g>
+
+                            <g class="network-hotspot" data-pin tabindex="0" role="button" aria-label="Johor Bahru location">
+                                <line x1="302" y1="404" x2="336" y2="404" class="network-line desktop-only" />
+                                <line x1="336" y1="404" x2="344" y2="410" class="network-line desktop-only" />
+                                <circle cx="302" cy="404" r="18" class="hotspot-ring" />
+                                <circle cx="302" cy="404" r="7" class="hotspot-core" />
+                                <g class="desktop-only">
+                                    <rect x="344" y="392" width="126" height="36" class="hotspot-label-box" rx="3" />
+                                    <circle cx="362" cy="410" r="6" class="hotspot-label-dot" />
+                                    <text x="378" y="415" class="hotspot-label-text">Johor Bahru</text>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-block bg-white">
+            <div class="container section-intro" data-reveal>
+                <div>
+                    <p class="eyebrow">Resources</p>
+                    <h2 class="display-md">Practical reading for <span class="heading-accent-soft">pallet-intensive businesses</span>.</h2>
+                </div>
+                <a href="./resources.html" class="text-link">View all articles</a>
+            </div>
+            <div class="container grid-cards grid-cards-4" id="home-articles"></div>
+        </section>
+
+        <div id="shared-cta"></div>
+    </main>
+    <div id="site-footer"></div>
+    <script type="module" src="./scripts/home.js"></script>
+</body>
+
+</html>

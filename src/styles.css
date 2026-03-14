@@ -382,6 +382,16 @@
         background-repeat: no-repeat;
     }
 
+    .hero-shell::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background:
+            linear-gradient(180deg, rgba(7, 17, 31, 0.2), rgba(7, 17, 31, 0.2)),
+            url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80") center / cover no-repeat;
+    }
+
     body[data-page="home"] .hero-shell {
         height: 100svh;
         min-height: 100svh;
@@ -389,16 +399,20 @@
 
     .hero-swiper {
         @apply absolute inset-0 z-0 h-full w-full;
+        background: transparent;
     }
 
     .hero-swiper .swiper-wrapper,
     .hero-swiper .swiper-slide {
         height: 100% !important;
         position: relative;
+        background: transparent;
     }
 
     .hero-media {
         @apply absolute inset-0 h-full w-full;
+        z-index: 1;
+        background: transparent;
     }
 
     .hero-media {
@@ -407,6 +421,7 @@
 
     .hero-overlay {
         @apply absolute inset-0;
+        z-index: 2;
         background:
             linear-gradient(90deg, rgba(7, 17, 31, 0.92) 0%, rgba(7, 17, 31, 0.74) 42%, rgba(7, 17, 31, 0.84) 100%),
             linear-gradient(180deg, rgba(8, 24, 47, 0.24) 0%, rgba(8, 24, 47, 0.08) 100%);
@@ -433,6 +448,14 @@
     }
 
     @media (max-width: 767px) {
+        body:not([data-page="home"]) main {
+            padding-top: 5.4rem;
+        }
+
+        .header-cta {
+            display: none;
+        }
+
         .header-bar {
             gap: 0.75rem;
             padding-top: 0.75rem;
@@ -473,8 +496,8 @@
             position: relative;
             inset: auto;
             display: block;
-            padding-top: 7.25rem;
-            padding-bottom: 1.5rem;
+            padding-top: 8.15rem;
+            padding-bottom: 0.5rem;
         }
 
         .hero-grid {
@@ -483,7 +506,7 @@
         }
 
         .hero-copy {
-            padding-top: 0.5rem;
+            padding-top: 2.55rem;
         }
 
         .hero-copy .eyebrow,
@@ -493,15 +516,15 @@
         }
 
         .hero-copy .display-xl {
-            margin-top: 0.7rem;
-            font-size: clamp(2.05rem, 9vw, 2.85rem);
+            margin-top: 0.55rem;
+            font-size: clamp(1.95rem, 8.6vw, 2.65rem);
             line-height: 1.02;
         }
 
         .hero-copy .lead {
-            margin-top: 0.75rem;
-            font-size: 1rem;
-            line-height: 1.75rem;
+            margin-top: 0.65rem;
+            font-size: 0.96rem;
+            line-height: 1.62rem;
         }
 
         .hero-actions {
@@ -522,7 +545,43 @@
         }
 
         .hero-panel {
-            display: none;
+            display: block;
+            margin-top: 0.35rem;
+            padding: 0.85rem 0.85rem 0.9rem;
+            border-radius: 22px;
+            background:
+                linear-gradient(180deg, rgba(9, 24, 43, 0.72), rgba(9, 24, 43, 0.56)),
+                linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 18px 46px rgba(4, 13, 26, 0.26);
+        }
+
+        .hero-panel > .eyebrow {
+            margin-bottom: 0.15rem;
+        }
+
+        .hero-panel-list {
+            margin-top: 0.65rem;
+            gap: 0.65rem;
+        }
+
+        .hero-panel-list > div {
+            padding: 0.55rem 0.7rem;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+        }
+
+        .hero-panel-list h2 {
+            font-size: 0.92rem;
+            line-height: 1.25;
+        }
+
+        .hero-panel-list p {
+            margin-top: 0.25rem;
+            font-size: 0.84rem;
+            line-height: 1.45;
         }
     }
 
@@ -1241,43 +1300,49 @@
         }
 
         .scorecard-shell {
-            grid-template-columns: 0.28fr 0.72fr;
-            gap: 2rem;
+            grid-template-columns: 0.26fr 0.74fr;
+            gap: 1.75rem;
             padding: 1rem 0;
         }
 
         .scorecard-content {
-            gap: 2rem;
+            gap: 1.75rem;
         }
 
         .scorecard-metrics {
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.15rem;
         }
 
         .scorecard-title {
-            max-width: 34rem;
-            font-size: clamp(1.5rem, 3vw, 2rem);
+            max-width: 28rem;
+            font-size: clamp(1.4rem, 2.6vw, 1.85rem);
+        }
+
+        .scorecard-metric:last-child {
+            grid-column: 1 / -1;
+            max-width: 14rem;
+            margin-inline: auto;
         }
 
         .scorecard-ring {
-            width: 6.5rem;
-            height: 6.5rem;
-            margin-bottom: 0.9rem;
+            width: 5.8rem;
+            height: 5.8rem;
+            margin-bottom: 0.7rem;
         }
 
         .scorecard-ring-core {
-            width: 3.6rem;
-            height: 3.6rem;
+            width: 3.25rem;
+            height: 3.25rem;
         }
 
         .scorecard-value {
-            font-size: 2.5rem;
+            font-size: 2.15rem;
         }
 
         .scorecard-metric-label {
-            max-width: 10rem;
-            font-size: 0.76rem;
+            max-width: 9rem;
+            font-size: 0.72rem;
         }
     }
 
@@ -1288,66 +1353,110 @@
         }
 
         .scorecard-shell {
-            gap: 1.75rem;
-            padding: 0.5rem 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.6rem;
+            padding: 0;
         }
 
         .scorecard-rank {
-            align-items: center;
-            text-align: center;
-            line-height: 0.88;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: end;
+            justify-content: start;
+            column-gap: 0.75rem;
+            row-gap: 0;
+            text-align: left;
+            line-height: 0.82;
             height: auto;
         }
 
+        .scorecard-year-top,
+        .scorecard-year-bottom {
+            font-size: clamp(4.3rem, 24vw, 5.8rem);
+        }
+
+        .scorecard-year-top {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .scorecard-year-bottom {
+            grid-column: 1;
+            grid-row: 2;
+            margin-top: -0.2rem;
+        }
+
         .scorecard-label {
-            max-width: none;
-            text-align: center;
+            grid-column: 2;
+            grid-row: 1 / span 2;
+            align-self: center;
+            max-width: 8.6rem;
+            margin-top: 0;
+            text-align: left;
+            font-size: 1rem;
+            line-height: 0.92;
         }
 
         .scorecard-content {
-            gap: 1.5rem;
-            text-align: center;
+            gap: 1.4rem;
+            text-align: left;
         }
 
         .scorecard-copy {
-            justify-items: center;
+            justify-items: start;
         }
 
         .scorecard-kicker {
-            font-size: 0.78rem;
-            letter-spacing: 0.18em;
+            font-size: 0.7rem;
+            letter-spacing: 0.16em;
         }
 
         .scorecard-title {
-            margin-top: 0.65rem;
-            max-width: 18rem;
-            font-size: clamp(1.5rem, 6vw, 2rem);
-            line-height: 1.16;
+            margin-top: 0.5rem;
+            max-width: 100%;
+            font-size: clamp(1.65rem, 7vw, 2.1rem);
+            line-height: 1.02;
         }
 
         .scorecard-metrics {
             grid-template-columns: 1fr;
-            gap: 1.75rem;
+            gap: 0.9rem;
         }
 
         .scorecard-ring {
-            width: 6.5rem;
-            height: 6.5rem;
-            margin-bottom: 0.8rem;
+            width: 4.9rem;
+            height: 4.9rem;
+            margin: 0;
         }
 
         .scorecard-ring-core {
-            width: 3.5rem;
-            height: 3.5rem;
+            width: 2.7rem;
+            height: 2.7rem;
+        }
+
+        .scorecard-metric {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            gap: 0.9rem 1rem;
+            text-align: left;
+            padding: 1rem 1.05rem;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.06);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
         }
 
         .scorecard-value {
-            font-size: 2.4rem;
+            font-size: 1.95rem;
+            align-self: end;
         }
 
         .scorecard-metric-label {
-            max-width: 11rem;
-            font-size: 0.76rem;
+            margin: 0.2rem 0 0;
+            max-width: none;
+            font-size: 0.68rem;
+            line-height: 1.35;
         }
     }
 
@@ -1360,11 +1469,37 @@
     }
 
     .site-footer {
-        @apply border-t border-slate-800 bg-slate-950 text-slate-300;
+        position: relative;
+        overflow: hidden;
+        color: #c7d1e3;
+        border-top: 1px solid rgba(51, 65, 85, 0.7);
+        background:
+            radial-gradient(circle at top left, rgba(0, 103, 245, 0.14), transparent 24%),
+            radial-gradient(circle at right, rgba(244, 169, 61, 0.1), transparent 20%),
+            linear-gradient(180deg, #06101d 0%, #081426 52%, #050d1a 100%);
+    }
+
+    .site-footer::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background:
+            linear-gradient(120deg, rgba(255, 255, 255, 0.04), transparent 22%, transparent 78%, rgba(255, 255, 255, 0.03)),
+            radial-gradient(circle at top, rgba(255, 255, 255, 0.03), transparent 42%);
+    }
+
+    .footer-shell {
+        position: relative;
+        z-index: 1;
+        padding-top: 4rem;
+        padding-bottom: 2.4rem;
     }
 
     .footer-grid {
-        @apply grid gap-12 py-16 lg:grid-cols-[1.4fr_0.8fr_1fr];
+        display: grid;
+        gap: 2.25rem;
+        align-items: start;
     }
 
     .footer-logo {
@@ -1372,23 +1507,156 @@
     }
 
     .footer-copy {
-        @apply mt-6 max-w-sm font-body text-base leading-7 text-slate-400;
+        @apply mt-6 max-w-md font-body text-base leading-8;
+        color: #94a3b8;
     }
 
     .footer-title {
-        @apply text-sm font-semibold uppercase tracking-[0.18em] text-white;
+        font-size: 0.84rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #f8fbff;
     }
 
     .footer-links {
-        @apply mt-5 grid gap-3 font-body text-sm leading-6 text-slate-400;
+        display: grid;
+        gap: 0.85rem;
+        margin-top: 1.1rem;
     }
 
     .footer-links a {
-        @apply transition hover:text-white;
+        display: inline-block;
+        width: fit-content;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        font-size: 0.98rem;
+        font-weight: 500;
+        color: #c7d1e3;
+        transition:
+            transform 0.2s ease,
+            color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+        transform: translateX(2px);
+        color: #ffffff;
+    }
+
+    .footer-contact-list {
+        display: grid;
+        gap: 1rem;
+        margin-top: 1.1rem;
+    }
+
+    .footer-contact-item {
+        display: grid;
+        grid-template-columns: 2.5rem minmax(0, 1fr);
+        gap: 0.9rem;
+        align-items: start;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        color: #c7d1e3;
+        transition:
+            color 0.2s ease;
+    }
+
+    .footer-contact-item:hover {
+        color: #f8fbff;
+    }
+
+    .footer-contact-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 999px;
+        color: #f4a93d;
+        background: rgba(255, 255, 255, 0.04);
+    }
+
+    .footer-contact-text {
+        font-size: 0.98rem;
+        font-weight: 500;
+        line-height: 1.7;
+        color: inherit;
     }
 
     .footer-bottom {
-        @apply flex flex-col gap-2 border-t border-slate-800 py-6 text-sm text-slate-500 lg:flex-row lg:items-center lg:justify-between;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        padding-top: 1.15rem;
+        padding-bottom: 1.4rem;
+        border-top: 1px solid rgba(51, 65, 85, 0.72);
+        font-size: 0.95rem;
+        color: #64748b;
+    }
+
+    @media (min-width: 900px) {
+        .footer-grid {
+            grid-template-columns: minmax(0, 1.45fr) minmax(15rem, 0.72fr) minmax(18rem, 1fr);
+        }
+
+        .footer-bottom {
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .footer-shell {
+            padding-top: 3rem;
+            padding-bottom: 2rem;
+        }
+
+        .footer-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.8rem 1.25rem;
+        }
+
+        .footer-brand {
+            grid-column: 1 / -1;
+        }
+
+        .footer-copy {
+            margin-top: 1rem;
+            font-size: 0.98rem;
+            line-height: 1.9;
+        }
+
+        .footer-links a {
+            font-size: 0.96rem;
+        }
+
+        .footer-contact-item {
+            grid-template-columns: 2.35rem minmax(0, 1fr);
+            gap: 0.8rem;
+        }
+
+        .footer-contact-icon {
+            width: 2.35rem;
+            height: 2.35rem;
+        }
+
+        .footer-contact-text {
+            font-size: 0.95rem;
+            line-height: 1.65;
+        }
+
+        .footer-bottom {
+            gap: 0.55rem;
+            font-size: 0.88rem;
+            text-align: center;
+        }
     }
 
     .whatsapp-fab {

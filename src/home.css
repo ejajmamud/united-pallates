@@ -1033,9 +1033,15 @@ body[data-page="home"] .header-actions {
     }
 
     .home-frame-section {
-        height: calc(100svh - var(--header-height, 72px));
-        min-height: calc(100svh - var(--header-height, 72px));
+        display: block;
+        height: auto;
+        min-height: 0;
         padding-bottom: 0;
+    }
+
+    body[data-page="home"] .home-frame-section .container {
+        display: block;
+        flex: none;
     }
 
     body[data-page="home"] .brand-logo {
@@ -1060,8 +1066,9 @@ body[data-page="home"] .header-actions {
     }
 
     .home-hero-frame {
-        height: 100%;
-        min-height: calc(100svh - var(--header-height, 72px));
+        height: auto;
+        min-height: 0;
+        overflow: visible;
         border-radius: 0;
         border-left: 0;
         border-right: 0;
@@ -1081,12 +1088,11 @@ body[data-page="home"] .header-actions {
         display: grid;
         grid-template-rows: auto auto;
         align-items: stretch;
-        flex-direction: column;
         padding: 0.55rem 1rem 0.8rem;
         justify-content: stretch;
         gap: 0.7rem;
-        flex: 1 1 auto;
-        min-height: 0;
+        flex: 0 0 auto;
+        min-height: auto;
     }
 
     .home-rotator {

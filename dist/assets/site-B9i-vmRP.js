@@ -9,7 +9,7 @@ ${t?'Expression: "'+t+`"
                     <a href="./index.html" class="brand-mark" aria-label="United Pallets home">
                         <img src="https://olive-stork-534193.hostingersite.com/wp-content/uploads/2026/02/cropped-Untitled-design-78.png" alt="United Pallets logo" class="brand-logo">
                     </a>
-                    ${t?'<p class="brand-tagline">From Used to Renewed -<br>One Pallet at a Time."</p>':""}
+                    ${t?'<p class="brand-tagline">From Used to Renewed -<br>One Pallet at a Time.</p>':""}
                 </div>
 
                 <nav class="desktop-nav" aria-label="Primary">

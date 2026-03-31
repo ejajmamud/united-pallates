@@ -4,19 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="United Pallets provides pallet manufacturing, recycling, supply chain support, and nationwide logistics programs across Peninsular Malaysia.">
+    <meta name="description" content="United Pallets manufactures and supplies new and recycled pallets nationwide across Peninsular Malaysia.">
     <link rel="icon" type="image/png" href="/assets/fav-Zp4JqGCc.png">
-    <link
-        rel="stylesheet"
-        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-        crossorigin=""
-    >
     <style>
         body.is-loading {
             overflow: hidden;
-            background: #07111f;
+            background: #f5f1e8;
         }
 
         body.is-loading #site-header,
@@ -32,32 +25,29 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background:
-                radial-gradient(circle at top, rgba(244, 169, 61, 0.16), transparent 30%),
-                linear-gradient(135deg, #07111f 0%, #102448 58%, #18365f 100%);
+            background: #f5f1e8;
             transition: opacity 0.45s ease, visibility 0.45s ease;
         }
 
         .site-preloader__mark {
             display: grid;
-            gap: 16px;
+            gap: 0.75rem;
             justify-items: center;
         }
 
         .site-preloader__ring {
-            width: 64px;
-            height: 64px;
-            border: 3px solid rgba(255, 255, 255, 0.12);
-            border-top-color: #f4a93d;
-            border-right-color: rgba(123, 176, 234, 0.95);
+            width: 3.5rem;
+            height: 3.5rem;
+            border: 2px solid rgba(17, 17, 17, 0.18);
+            border-top-color: #111111;
             border-radius: 999px;
             animation: up-spin 0.9s linear infinite;
         }
 
         .site-preloader__text {
-            color: rgba(255, 255, 255, 0.92);
-            font: 600 12px/1 "WF Visual Sans Variable", Arial, sans-serif;
-            letter-spacing: 0.22em;
+            color: #111111;
+            font: 600 0.75rem/1 "Arial", sans-serif;
+            letter-spacing: 0.16em;
             text-transform: uppercase;
         }
 
@@ -79,11 +69,10 @@
             }
         }
     </style>
-    <title>United Pallets | Lifecycle Pallet Services</title>
-  <script type="module" crossorigin src="/assets/home-CRAenK3t.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/site-C8iIbOLJ.js">
-  <link rel="modulepreload" crossorigin href="/assets/siteContent-CmZOU2qp.js">
-  <link rel="stylesheet" crossorigin href="/assets/site-CdAzazNf.css">
+    <title>United Pallets | Homepage</title>
+  <script type="module" crossorigin src="/assets/home-CpArIxTZ.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/site-BAdweKuo.js">
+  <link rel="stylesheet" crossorigin href="/assets/site-De6B7Jf2.css">
 </head>
 
 <body data-page="home" class="is-loading">
@@ -94,222 +83,149 @@
         </div>
     </div>
     <div id="site-header"></div>
-    <main>
-        <section class="hero-shell">
-            <div class="swiper hero-swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <video class="hero-media" autoplay muted loop playsinline preload="auto">
-                            <source src="/assets/hero1-C2-v8aF0.mp4" type="video/mp4">
-                        </video>
+    <main class="home-wireframe">
+        <section class="home-frame-section">
+            <div class="container">
+                <div class="home-hero-frame">
+                    <div class="home-hero-callout">
+                        <h2>Innovative<br>Pallet Services</h2>
+                        <p>
+                            We provide top-quality pallet solutions at every stage of the pallet life cycle,
+                            ensuring efficiency and reliability for your business.
+                        </p>
+                        <p>
+                            From single orders to comprehensive pallet management programs, our innovative
+                            platform enhances your supply chain and delivers measurable value.
+                        </p>
                     </div>
-                    <div class="swiper-slide">
-                        <video class="hero-media" autoplay muted loop playsinline preload="metadata">
-                            <source src="/assets/hero2-DdvDLXtp.mp4" type="video/mp4">
-                        </video>
+                    <div class="home-hero-visual">
+                        <a href="./contact.html" class="home-hero-quote">Get a Quote Now</a>
+                        <div class="home-rotator" aria-label="Production and pallet photography rotation">
+                            <img src="/assets/standard-7tfcr9Xc.webp" alt="Standard pallets stacked in the yard" class="home-rotator-image is-active">
+                            <img src="/assets/custom-pallet-D3arlHvA.webp" alt="Custom pallet production detail" class="home-rotator-image">
+                            <img src="/assets/Reconditioned-Pallets-Df4wtm5f.png" alt="Reconditioned pallets prepared for dispatch" class="home-rotator-image">
+                            <img src="/assets/heat-treatment-palletr-V9YW8gIo.webp" alt="Heat treated pallets for export handling" class="home-rotator-image">
+                            <img src="/assets/size-IMPNqCkG.jpg" alt="Pallet sizing and warehouse handling" class="home-rotator-image">
+                        </div>
                     </div>
                 </div>
+                <div class="home-service-tabs" aria-label="Homepage service links">
+                    <a href="./products.html">Buy Pallets</a>
+                    <a href="./contact.html">Sell Pallets</a>
+                    <a href="./services.html">Comprehensive Services</a>
+                </div>
             </div>
-            <div class="hero-overlay"></div>
-            <div class="container hero-content">
-                <div class="hero-grid">
-                    <div class="hero-copy">
-                        <p class="eyebrow text-brand-gold">Integrated Pallet Lifecycle Services</p>
-                        <h1 class="display-xl">From Used to <span class="heading-accent-soft">Renewed</span> &mdash; One Pallet at a Time</h1>
-                        <p class="lead text-slate-200">
-                            United Pallets supports the full pallet lifecycle with supply, recovery, repair,
-                            remanufacturing, and logistics programs built for serious industrial operations.
-                        </p>
-                        <div class="hero-actions">
-                            <a href="./contact.html" class="btn-primary">Get a Quote Now</a>
-                            <a href="./services.html" class="btn-secondary">Explore Services</a>
-                        </div>
-                    </div>
-                    <div class="hero-panel glass-card">
-                        <p class="eyebrow text-brand-gold">Operational Scope</p>
-                        <div class="hero-panel-list">
-                            <div>
-                                <h2>Manufacturing and Supply</h2>
-                                <p>New, recycled, and remanufactured pallet availability shaped around throughput and handling requirements.</p>
-                            </div>
-                            <div>
-                                <h2>Recovery and Recycling</h2>
-                                <p>Collection and grading programs that help businesses recover value and reduce wood waste.</p>
-                            </div>
-                            <div>
-                                <h2>National Support</h2>
-                                <p>Regional service coverage across Peninsular Malaysia with local responsiveness and dependable execution.</p>
-                            </div>
-                        </div>
+        </section>
+
+        <section class="home-story-section">
+            <div class="container home-story-grid">
+                <div class="home-story-images">
+                    <figure class="home-story-image-card">
+                        <img src="/assets/custom-pallet-D3arlHvA.webp" alt="Custom pallet production line">
+                    </figure>
+                    <figure class="home-story-image-card">
+                        <img src="/assets/size-IMPNqCkG.jpg" alt="Warehouse pallet stock and handling">
+                    </figure>
+                </div>
+                <div class="home-story-copy">
+                    <h2>Nationwide Pallet Services Provider</h2>
+                    <p>
+                        United Pallets manufactures and supplies both new and recycled pallets nationwide. We manage
+                        nearly 640,000 pallets every year through our extensive network of company-owned manufacturing,
+                        recycling facilities, sawmills, and service locations. By harnessing innovation, we ensure each
+                        customer’s needs are met, adding measurable value to your supply chain and delivering peace of
+                        mind.
+                    </p>
+                    <p>
+                        It begins with listening to your needs and ends with utilising our vast resources to deliver a
+                        program with the best value.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-stats-band">
+            <div class="container home-stats-grid">
+                <article class="home-stat">
+                    <p>640k+</p>
+                    <h3>Pallets Managed Annually</h3>
+                </article>
+                <article class="home-stat">
+                    <p>99%</p>
+                    <h3>On Time Delivery</h3>
+                </article>
+                <article class="home-stat">
+                    <p>10 Years</p>
+                    <h3>Of Reliable Service</h3>
+                </article>
+            </div>
+        </section>
+
+        <section class="home-network-section">
+            <div class="container home-network-grid">
+                <div class="home-network-copy">
+                    <h2>Local Service on a National Scale</h2>
+                    <p>
+                        With our extensive presence and diverse range of products and services, we aspire to be a
+                        leading national pallet company in Malaysia.
+                    </p>
+                    <p>
+                        In today’s marketplace, this is precisely what your supply chain requires – a partner offering
+                        the capacity of a national provider, combined with the flexibility, care, and consistent
+                        service characteristic of a local pallet company.
+                    </p>
+                </div>
+                <div class="home-network-panel">
+                    <div class="home-network-map" aria-hidden="true">
+                        <span class="home-map-line home-map-line--north"></span>
+                        <span class="home-map-line home-map-line--central"></span>
+                        <span class="home-map-line home-map-line--south"></span>
+                        <span class="home-map-node home-map-node--penang">Penang</span>
+                        <span class="home-map-node home-map-node--rawang">Rawang</span>
+                        <span class="home-map-node home-map-node--nilai">Nilai</span>
+                        <span class="home-map-node home-map-node--jb">Johor Bahru</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section-block bg-white">
-            <div class="container section-intro" data-reveal>
-                <div>
-                    <p class="eyebrow">Innovative Pallet Services</p>
-                    <h2 class="display-md">Built for the demands of <span class="heading-accent">daily pallet movement</span>.</h2>
+        <section class="home-impact-section">
+            <div class="container home-impact-grid">
+                <figure class="home-impact-image-card">
+                    <img src="/assets/Reconditioned-Pallets-Df4wtm5f.png" alt="Reconditioned pallets ready for reuse">
+                </figure>
+                <div class="home-impact-copy">
+                    <h2>From Used to Renewed,<br>One Pallet at a Time</h2>
+                    <p>
+                        In 2025, United Pallets recycled over 640,000 wooden pallets and offset around 15,275 tonnes
+                        of carbon, making a tangible impact on reducing carbon footprint.
+                    </p>
+                    <p>
+                        As an organisation making a significant impact on supply chains and communities throughout
+                        Malaysia, United Pallets is dedicated to supporting our stakeholders’ well-being and setting
+                        the standard for transparency in the industry.
+                    </p>
                 </div>
-                <p class="body-lg">
-                    United Pallets combines pallet supply, recycling, repair, and reporting into programs that reduce
-                    disruption and improve continuity across supply chains.
+            </div>
+        </section>
+
+        <section class="home-articles-section">
+            <div class="container">
+                <h2 class="home-articles-title">Top News and Articles</h2>
+                <div class="home-articles-grid">
+                    <a href="./article.html" class="home-article-card">heat treated<br>vs<br>funigated<br>pallets</a>
+                    <a href="./article.html" class="home-article-card">difference between<br>a 2 way and 4 way<br>pallet</a>
+                    <a href="./article.html" class="home-article-card">united pallets<br>releases 2025<br>corporate<br>social<br>responsibility<br>report</a>
+                    <a href="./article.html" class="home-article-card">all the parts<br>of a wooden<br>pallet</a>
+                </div>
+                <p class="home-articles-note">
+                    all this articles will link to its individual pages.<br>
+                    i will provide all contents pictures, charts or vector
                 </p>
             </div>
-            <div class="container grid-cards grid-cards-3" id="home-services"></div>
         </section>
-
-        <section class="section-block bg-brand-mist">
-            <div class="container split-section">
-                <div class="media-stack" data-reveal>
-                    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=900&q=80"
-                        alt="Truck fleet and pallet logistics" class="tile-img tile-img-lg" loading="lazy">
-                    <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=900&q=80"
-                        alt="Warehouse storage lanes" class="tile-img" loading="lazy">
-                    <img src="https://images.unsplash.com/photo-1586880244406-556ebe35f282?auto=format&fit=crop&w=900&q=80"
-                        alt="Pallet movement and handling" class="tile-img" loading="lazy">
-                </div>
-                <div data-reveal>
-                    <p class="eyebrow">Nationwide Coverage</p>
-                    <h2 class="display-md">Capacity backed by <span class="heading-accent">operating discipline</span>.</h2>
-                    <p class="body-lg">
-                        United Pallets manages new and recycled pallet flow nationwide through manufacturing support,
-                        service locations, recovery operations, and dependable routing across Peninsular Malaysia.
-                    </p>
-                    <div class="stats-grid" id="home-stats"></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-block section-block--flush bg-white">
-            <div class="scorecard-band" data-reveal>
-                <div class="container">
-                    <div class="scorecard-shell">
-                    <div class="scorecard-rank" data-reveal>
-                        <span class="scorecard-year-top">20</span>
-                        <span class="scorecard-year-bottom">25</span>
-                        <p class="scorecard-label">Green Score Card</p>
-                    </div>
-                    <div class="scorecard-content">
-                        <div class="scorecard-copy" data-reveal>
-                            <p class="scorecard-kicker">Sustainability Impact</p>
-                            <h2 class="scorecard-title">From used timber to <span>renewed operational value</span>.</h2>
-                        </div>
-                        <div class="scorecard-metrics">
-                            <article class="scorecard-metric scorecard-metric--emerald" data-reveal>
-                                <div class="scorecard-ring">
-                                    <div class="scorecard-ring-core" aria-hidden="true">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="icon-stroke"><path d="M7 20h10"></path><path d="M10 20c5.5-2.5.8-6.4 3-10"></path><path d="M9.5 9.4C5.7 10.8 6 15 2 17c5 1 4.7-5 8-6"></path><path d="M14 4c0 4.5 2.7 5.5 5 9 1.3 1.9.3 5-3 5"></path></svg>
-                                    </div>
-                                </div>
-                                <p class="scorecard-value">18,947</p>
-                                <p class="scorecard-metric-label">Trees Preserved</p>
-                            </article>
-                            <article class="scorecard-metric scorecard-metric--gold" data-reveal>
-                                <div class="scorecard-ring">
-                                    <div class="scorecard-ring-core" aria-hidden="true">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="icon-stroke"><path d="M21 8a2 2 0 0 0-2-2h-3.2a2 2 0 0 1-1.4-.6l-.8-.8A2 2 0 0 0 12.2 4H8a2 2 0 0 0-2 2v2"></path><path d="M3 10h18"></path><path d="M19 10v8a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-8"></path><path d="M10 14v4"></path><path d="M14 14v4"></path></svg>
-                                    </div>
-                                </div>
-                                <p class="scorecard-value">7,200</p>
-                                <p class="scorecard-metric-label">Tons of Landfill Waste Avoided</p>
-                            </article>
-                            <article class="scorecard-metric scorecard-metric--blue" data-reveal>
-                                <div class="scorecard-ring">
-                                    <div class="scorecard-ring-core" aria-hidden="true">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="icon-stroke"><path d="M17.5 19H9a7 7 0 1 1 6.71-9.01A4.5 4.5 0 1 1 17.5 19Z"></path></svg>
-                                    </div>
-                                </div>
-                                <p class="scorecard-value">9,720</p>
-                                <p class="scorecard-metric-label">Tons of CO2 Emissions Reduced</p>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-block network-section">
-            <div class="container network-shell">
-                <div data-reveal>
-                    <p class="eyebrow text-brand-gold">Malaysia Network</p>
-                    <h2 class="display-md text-white">Local service on a <span class="heading-accent-soft">national scale</span>.</h2>
-                    <p class="body-lg text-slate-300">
-                        With a broad operating footprint and multiple service points, United Pallets supports
-                        customers across Peninsular Malaysia while maintaining the responsiveness expected from a local partner.
-                    </p>
-                    <div class="network-legend" id="home-network-list"></div>
-                </div>
-                <div class="network-map-card" data-reveal>
-                    <div class="network-map">
-                        <div class="network-live-map" data-network-map aria-label="Peninsular Malaysia service footprint map"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-block bg-white home-faq-section">
-            <div class="container home-faq-shell">
-                <div class="home-faq-intro" data-reveal>
-                    <div class="home-faq-intro-card">
-                        <p class="eyebrow">FAQ Preview</p>
-                        <h2 class="display-md">Answers for <span class="heading-accent">buyers</span>, logistics teams, and recovery partners.</h2>
-                        <p class="body-lg">
-                            A quick pass through the most common questions around pallet supply, recycling, delivery timing,
-                            and lifecycle handling so decision-makers can get clarity fast.
-                        </p>
-                        <div class="home-faq-highlights">
-                            <div class="home-faq-highlight">
-                                <span class="home-faq-highlight-icon" aria-hidden="true"></span>
-                                <div>
-                                    <p class="home-faq-highlight-title">Operational answers</p>
-                                    <p class="home-faq-highlight-copy">Lead times, quantities, service footprint, and support expectations.</p>
-                                </div>
-                            </div>
-                            <div class="home-faq-highlight">
-                                <span class="home-faq-highlight-icon" aria-hidden="true"></span>
-                                <div>
-                                    <p class="home-faq-highlight-title">Lifecycle clarity</p>
-                                    <p class="home-faq-highlight-copy">Recovery, repair, reuse, and end-of-life handling explained simply.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="home-faq-actions">
-                            <a href="./about.html#faq" class="btn-primary">Show More FAQs</a>
-                            <a href="./contact.html" class="btn-secondary">Ask a Specific Question</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="home-faq-panel" data-reveal>
-                    <div class="home-faq-panel-top">
-                        <p class="home-faq-kicker">Frequently Asked Questions</p>
-                    </div>
-                    <div class="home-faq-list" id="home-faq-list" x-data="{ activeFaq: 0 }"></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-block bg-white">
-            <div class="container section-intro" data-reveal>
-                <div>
-                    <p class="eyebrow">Resources</p>
-                    <h2 class="display-md">Practical reading for <span class="heading-accent-soft">pallet-intensive businesses</span>.</h2>
-                </div>
-                <a href="./resources.html" class="text-link">View all articles</a>
-            </div>
-            <div class="container grid-cards grid-cards-4" id="home-articles"></div>
-        </section>
-
-        <div id="shared-cta"></div>
     </main>
     <div id="site-footer"></div>
-    <script
-        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-        crossorigin=""
-    ></script>
 </body>
 
 </html>

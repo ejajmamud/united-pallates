@@ -1111,17 +1111,28 @@ body[data-page="home"] .header-actions {
 
     .home-service-tabs a {
         width: auto;
-        flex: 1 1 calc(33.333% - 0.3rem);
+        flex: 1 1 calc(50% - 0.3rem);
         min-height: 2.55rem;
         padding: 0.5rem 0.45rem;
         font-size: 0.62rem;
         letter-spacing: 0.05em;
     }
 
+    .home-service-tabs a:last-child {
+        flex-basis: 100%;
+    }
+
     .home-hero-callout {
+        display: block;
+        height: auto;
+        max-height: none;
         margin: 0.5rem 1rem 0;
         padding: 1rem 1rem 0.98rem;
         border-radius: 1rem;
+    }
+
+    .home-hero-callout::before {
+        display: none;
     }
 
     .home-hero-callout h2 {

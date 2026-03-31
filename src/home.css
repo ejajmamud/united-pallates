@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap");
-
 body[data-page="home"] {
     --home-bg: #f1e8d7;
     --home-bg-soft: #fbf6ed;
@@ -14,7 +12,7 @@ body[data-page="home"] {
         radial-gradient(circle at top left, rgba(197, 106, 50, 0.16), transparent 28%),
         linear-gradient(180deg, #f7f1e6 0%, #efe5d3 100%);
     color: var(--home-ink);
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: "Manrope", sans-serif;
 }
 
 body[data-page="home"]::before {
@@ -46,6 +44,11 @@ body[data-page="home"] .site-header .container,
 body[data-page="home"] .home-frame-section .container {
     max-width: none;
     width: 100%;
+}
+
+body[data-page="home"] .home-frame-section .container {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 body[data-page="home"] .site-header {
@@ -105,10 +108,11 @@ body[data-page="home"] .brand-logo {
     margin: 0;
     max-width: 18rem;
     color: var(--home-ink);
-    font-family: "IBM Plex Mono", monospace;
-    font-size: clamp(0.78rem, 0.95vw, 1rem);
-    line-height: 1.45;
-    letter-spacing: 0.08em;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(0.76rem, 0.92vw, 0.92rem);
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
 }
 
@@ -130,10 +134,10 @@ body[data-page="home"] .nav-button {
     padding: 0.45rem 0 0.25rem;
     border-radius: 0;
     color: var(--home-ink);
-    font-family: "Antonio", sans-serif;
-    font-size: clamp(1.25rem, 1.55vw, 1.8rem);
-    font-weight: 500;
-    letter-spacing: 0.02em;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(0.98rem, 1.08vw, 1.22rem);
+    font-weight: 800;
+    letter-spacing: 0.01em;
     text-transform: lowercase;
 }
 
@@ -165,7 +169,7 @@ body[data-page="home"] .dropdown-panel {
 body[data-page="home"] .dropdown-panel a {
     border-radius: 0.7rem;
     color: var(--home-ink);
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: "Manrope", sans-serif;
 }
 
 body[data-page="home"] .dropdown-panel a:hover {
@@ -197,7 +201,7 @@ body[data-page="home"] .header-actions {
 
 .home-hero-frame {
     display: grid;
-    grid-template-columns: minmax(22rem, 31rem) minmax(0, 1fr);
+    grid-template-columns: minmax(22rem, 32rem) minmax(0, 1fr);
     align-items: stretch;
     min-height: calc(100svh - var(--header-height, 84px));
     overflow: hidden;
@@ -226,7 +230,7 @@ body[data-page="home"] .header-actions {
     align-self: center;
     margin: clamp(1.5rem, 4vw, 3rem);
     padding: 2.3rem 2.25rem 2.2rem;
-    max-width: 26rem;
+    max-width: 100%;
     border: 1px solid rgba(19, 25, 27, 0.1);
     border-radius: 1.35rem;
     background:
@@ -254,16 +258,19 @@ body[data-page="home"] .header-actions {
 .home-impact-copy h2,
 .home-articles-title {
     margin: 0;
-    font-family: "Antonio", sans-serif;
-    font-weight: 500;
-    line-height: 0.96;
-    letter-spacing: 0.015em;
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+    line-height: 0.92;
+    letter-spacing: -0.05em;
     text-transform: uppercase;
 }
 
 .home-hero-callout h2 {
     color: #f7f1e4;
-    font-size: clamp(3rem, 4.8vw, 5.6rem);
+    font-size: clamp(2.6rem, 4vw, 4.9rem);
+    overflow-wrap: anywhere;
+    word-break: normal;
+    max-width: 100%;
 }
 
 .home-hero-callout p,
@@ -272,9 +279,9 @@ body[data-page="home"] .header-actions {
 .home-impact-copy p,
 .home-articles-note {
     margin: 0;
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: "Manrope", sans-serif;
     font-size: clamp(1rem, 1.08vw, 1.16rem);
-    line-height: 1.48;
+    line-height: 1.55;
 }
 
 .home-hero-callout p {
@@ -313,8 +320,9 @@ body[data-page="home"] .header-actions {
     border: 1px solid rgba(120, 59, 31, 0.2);
     border-radius: 999px;
     color: #fff7eb;
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 0.88rem;
+    font-family: "Manrope", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 800;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     background: linear-gradient(135deg, #a54c22 0%, #c56a32 100%);
@@ -390,8 +398,9 @@ body[data-page="home"] .header-actions {
     border: 1px solid rgba(19, 25, 27, 0.1);
     border-radius: 999px;
     color: var(--home-ink);
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 0.84rem;
+    font-family: "Manrope", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 800;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     background: rgba(251, 246, 237, 0.72);
@@ -475,8 +484,8 @@ body[data-page="home"] .header-actions {
     display: block;
     margin-bottom: 0.9rem;
     color: var(--home-rust-dark);
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 0.74rem;
+    font-family: "Manrope", sans-serif;
+    font-size: 0.7rem;
     font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
@@ -529,7 +538,7 @@ body[data-page="home"] .header-actions {
 .home-stat p,
 .home-stat h3 {
     margin: 0;
-    font-family: "Antonio", sans-serif;
+    font-family: "Manrope", sans-serif;
     line-height: 0.94;
     text-transform: uppercase;
 }
@@ -537,14 +546,14 @@ body[data-page="home"] .header-actions {
 .home-stat p {
     color: #f4d1b7;
     font-size: clamp(2.8rem, 4vw, 4.5rem);
-    font-weight: 500;
+    font-weight: 800;
 }
 
 .home-stat h3 {
     margin-top: 0.55rem;
     color: #f7f1e4;
     font-size: clamp(1.5rem, 2.2vw, 2.5rem);
-    font-weight: 400;
+    font-weight: 800;
 }
 
 .home-network-section {
@@ -645,8 +654,9 @@ body[data-page="home"] .header-actions {
     border-radius: 999px;
     background: #fbf6ed;
     color: var(--home-ink);
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 0.78rem;
+    font-family: "Manrope", sans-serif;
+    font-size: 0.74rem;
+    font-weight: 800;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     transform: translateX(-50%);
@@ -739,10 +749,11 @@ body[data-page="home"] .header-actions {
     border: 1px solid rgba(19, 25, 27, 0.12);
     border-radius: 1.35rem;
     color: var(--home-ink);
-    font-family: "Antonio", sans-serif;
+    font-family: "Manrope", sans-serif;
     font-size: clamp(1.45rem, 1.9vw, 2.2rem);
-    font-weight: 500;
-    line-height: 0.95;
+    font-weight: 800;
+    line-height: 0.98;
+    letter-spacing: -0.04em;
     text-align: left;
     text-transform: uppercase;
     background:
@@ -789,9 +800,10 @@ body[data-page="home"] .header-actions {
     margin-top: 1.6rem;
     text-align: center;
     color: var(--home-ink-soft);
-    font-family: "IBM Plex Mono", monospace;
-    font-size: clamp(0.82rem, 0.9vw, 0.95rem);
-    letter-spacing: 0.04em;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(0.78rem, 0.88vw, 0.9rem);
+    font-weight: 700;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 
@@ -840,6 +852,10 @@ body[data-page="home"] .header-actions {
     .home-hero-callout {
         margin: 1.1rem 1.1rem 0;
         max-width: none;
+    }
+
+    .home-hero-callout h2 {
+        font-size: clamp(2.4rem, 6vw, 4rem);
     }
 
     .home-hero-visual {
@@ -993,14 +1009,15 @@ body[data-page="home"] .header-actions {
     }
 
     .home-hero-callout h2 {
-        font-size: clamp(2.35rem, 13vw, 3.7rem);
-        line-height: 0.9;
+        font-size: clamp(1.95rem, 10.4vw, 3rem);
+        line-height: 0.94;
+        letter-spacing: -0.045em;
     }
 
     .home-hero-callout p {
         max-width: none;
-        font-size: 0.9rem;
-        line-height: 1.42;
+        font-size: 0.86rem;
+        line-height: 1.38;
     }
 
     .home-hero-callout p + p {

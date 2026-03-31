@@ -1,1 +1,0 @@
-import{b as o}from"./site-BKtrG9Mj.js";o("home");const t=Array.from(document.querySelectorAll(".home-rotator-image"));if(t.length>1){let e=0;window.setInterval(()=>{t[e].classList.remove("is-active"),e=(e+1)%t.length,t[e].classList.add("is-active")},3200)}

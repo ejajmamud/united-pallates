@@ -138,7 +138,7 @@ export function articleCard(article) {
                 <span class="tag">${article.category}</span>
                 <h3>${article.title}</h3>
                 <p>${article.description}</p>
-                <a href="./article.html" class="inline-link">Read more ${icon("arrowRight", { width: 16, height: 16 })}</a>
+                <a href="./article.html?slug=${article.slug}" class="inline-link">Read more ${icon("arrowRight", { width: 16, height: 16 })}</a>
             </div>
         </article>
     `;

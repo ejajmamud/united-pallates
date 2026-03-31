@@ -137,7 +137,7 @@ ${t?'Expression: "'+t+`"
                 <span class="tag">${i.category}</span>
                 <h3>${i.title}</h3>
                 <p>${i.description}</p>
-                <a href="./article.html" class="inline-link">Read more ${$r("arrowRight",{width:16,height:16})}</a>
+                <a href="./article.html?slug=${i.slug}" class="inline-link">Read more ${$r("arrowRight",{width:16,height:16})}</a>
             </div>
         </article>
     `}function I_(){return`

@@ -7,10 +7,13 @@
     <meta name="description" content="United Pallets manufactures and supplies new and recycled pallets nationwide across Peninsular Malaysia.">
     <link rel="icon" type="image/png" href="./assets/icons/fav.png">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./home.css">
     <style>
         body.is-loading {
             overflow: hidden;
-            background: #f5f1e8;
+            background:
+                radial-gradient(circle at top, rgba(197, 106, 50, 0.22), transparent 34%),
+                linear-gradient(180deg, #111719 0%, #1a2326 100%);
         }
 
         body.is-loading #site-header,
@@ -26,7 +29,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #f5f1e8;
+            background:
+                radial-gradient(circle at top, rgba(197, 106, 50, 0.22), transparent 34%),
+                linear-gradient(180deg, #111719 0%, #1a2326 100%);
             transition: opacity 0.45s ease, visibility 0.45s ease;
         }
 
@@ -39,15 +44,15 @@
         .site-preloader__ring {
             width: 3.5rem;
             height: 3.5rem;
-            border: 2px solid rgba(17, 17, 17, 0.18);
-            border-top-color: #111111;
+            border: 2px solid rgba(246, 239, 222, 0.18);
+            border-top-color: #f6efde;
             border-radius: 999px;
             animation: up-spin 0.9s linear infinite;
         }
 
         .site-preloader__text {
-            color: #111111;
-            font: 600 0.75rem/1 "Arial", sans-serif;
+            color: #f6efde;
+            font: 600 0.75rem/1 "IBM Plex Mono", monospace;
             letter-spacing: 0.16em;
             text-transform: uppercase;
         }
@@ -84,8 +89,8 @@
     <main class="home-wireframe">
         <section class="home-frame-section">
             <div class="container">
-                <div class="home-hero-frame">
-                    <div class="home-hero-callout">
+                <div class="home-hero-frame" data-reveal>
+                    <div class="home-hero-callout" data-reveal>
                         <h2>Innovative<br>Pallet Services</h2>
                         <p>
                             We provide top-quality pallet solutions at every stage of the pallet life cycle,
@@ -96,7 +101,7 @@
                             platform enhances your supply chain and delivers measurable value.
                         </p>
                     </div>
-                    <div class="home-hero-visual">
+                    <div class="home-hero-visual" data-reveal>
                         <a href="./contact.html" class="home-hero-quote">Get a Quote Now</a>
                         <div class="home-rotator" aria-label="Production and pallet photography rotation">
                             <img src="./assets/pallets/standard.webp" alt="Standard pallets stacked in the yard" class="home-rotator-image is-active">
@@ -105,19 +110,19 @@
                             <img src="./assets/pallets/heat-treatment-palletr.webp" alt="Heat treated pallets for export handling" class="home-rotator-image">
                             <img src="./assets/pallets/size.jpg" alt="Pallet sizing and warehouse handling" class="home-rotator-image">
                         </div>
+                        <div class="home-service-tabs" aria-label="Homepage service links">
+                            <a href="./products.html">Buy Pallets</a>
+                            <a href="./contact.html">Sell Pallets</a>
+                            <a href="./services.html">Comprehensive Services</a>
+                        </div>
                     </div>
-                </div>
-                <div class="home-service-tabs" aria-label="Homepage service links">
-                    <a href="./products.html">Buy Pallets</a>
-                    <a href="./contact.html">Sell Pallets</a>
-                    <a href="./services.html">Comprehensive Services</a>
                 </div>
             </div>
         </section>
 
         <section class="home-story-section">
             <div class="container home-story-grid">
-                <div class="home-story-images">
+                <div class="home-story-images" data-reveal>
                     <figure class="home-story-image-card">
                         <img src="./assets/pallets/custom-pallet.webp" alt="Custom pallet production line">
                     </figure>
@@ -125,13 +130,13 @@
                         <img src="./assets/pallets/size.jpg" alt="Warehouse pallet stock and handling">
                     </figure>
                 </div>
-                <div class="home-story-copy">
+                <div class="home-story-copy" data-reveal>
                     <h2>Nationwide Pallet Services Provider</h2>
                     <p>
                         United Pallets manufactures and supplies both new and recycled pallets nationwide. We manage
                         nearly 640,000 pallets every year through our extensive network of company-owned manufacturing,
                         recycling facilities, sawmills, and service locations. By harnessing innovation, we ensure each
-                        customer’s needs are met, adding measurable value to your supply chain and delivering peace of
+                        customer's needs are met, adding measurable value to your supply chain and delivering peace of
                         mind.
                     </p>
                     <p>
@@ -143,7 +148,7 @@
         </section>
 
         <section class="home-stats-band">
-            <div class="container home-stats-grid">
+            <div class="container home-stats-grid" data-reveal>
                 <article class="home-stat">
                     <p>640k+</p>
                     <h3>Pallets Managed Annually</h3>
@@ -161,19 +166,19 @@
 
         <section class="home-network-section">
             <div class="container home-network-grid">
-                <div class="home-network-copy">
+                <div class="home-network-copy" data-reveal>
                     <h2>Local Service on a National Scale</h2>
                     <p>
                         With our extensive presence and diverse range of products and services, we aspire to be a
                         leading national pallet company in Malaysia.
                     </p>
                     <p>
-                        In today’s marketplace, this is precisely what your supply chain requires – a partner offering
+                        In today's marketplace, this is precisely what your supply chain requires - a partner offering
                         the capacity of a national provider, combined with the flexibility, care, and consistent
                         service characteristic of a local pallet company.
                     </p>
                 </div>
-                <div class="home-network-panel">
+                <div class="home-network-panel" data-reveal>
                     <div class="home-network-map" aria-hidden="true">
                         <span class="home-map-line home-map-line--north"></span>
                         <span class="home-map-line home-map-line--central"></span>
@@ -189,10 +194,10 @@
 
         <section class="home-impact-section">
             <div class="container home-impact-grid">
-                <figure class="home-impact-image-card">
+                <figure class="home-impact-image-card" data-reveal>
                     <img src="./assets/pallets/Reconditioned-Pallets.png" alt="Reconditioned pallets ready for reuse">
                 </figure>
-                <div class="home-impact-copy">
+                <div class="home-impact-copy" data-reveal>
                     <h2>From Used to Renewed,<br>One Pallet at a Time</h2>
                     <p>
                         In 2025, United Pallets recycled over 640,000 wooden pallets and offset around 15,275 tonnes
@@ -200,7 +205,7 @@
                     </p>
                     <p>
                         As an organisation making a significant impact on supply chains and communities throughout
-                        Malaysia, United Pallets is dedicated to supporting our stakeholders’ well-being and setting
+                        Malaysia, United Pallets is dedicated to supporting our stakeholders' well-being and setting
                         the standard for transparency in the industry.
                     </p>
                 </div>
@@ -209,17 +214,13 @@
 
         <section class="home-articles-section">
             <div class="container">
-                <h2 class="home-articles-title">Top News and Articles</h2>
-                <div class="home-articles-grid">
-                    <a href="./article.html" class="home-article-card">heat treated<br>vs<br>funigated<br>pallets</a>
-                    <a href="./article.html" class="home-article-card">difference between<br>a 2 way and 4 way<br>pallet</a>
-                    <a href="./article.html" class="home-article-card">united pallets<br>releases 2025<br>corporate<br>social<br>responsibility<br>report</a>
-                    <a href="./article.html" class="home-article-card">all the parts<br>of a wooden<br>pallet</a>
+                <h2 class="home-articles-title" data-reveal>Top News and Articles</h2>
+                <div class="home-articles-grid" data-reveal>
+                    <a href="./article.html?slug=heat-treated-vs-fumigated" class="home-article-card">heat treated<br>vs<br>funigated<br>pallets</a>
+                    <a href="./article.html?slug=2-way-vs-4-way" class="home-article-card">difference between<br>a 2 way and 4 way<br>pallet</a>
+                    <a href="./article.html?slug=csr-2025" class="home-article-card">united pallets<br>releases 2025<br>corporate<br>social<br>responsibility<br>report</a>
+                    <a href="./article.html?slug=wooden-pallet-parts" class="home-article-card">all the parts<br>of a wooden<br>pallet</a>
                 </div>
-                <p class="home-articles-note">
-                    all this articles will link to its individual pages.<br>
-                    i will provide all contents pictures, charts or vector
-                </p>
             </div>
         </section>
     </main>
